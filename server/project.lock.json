@@ -1,0 +1,377 @@
+{
+  "locked": false,
+  "version": -9996,
+  "targets": {
+    "DNX,Version=v4.5.1": {
+      "Akka/1.0.3": {
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.8"
+        },
+        "compile": {
+          "lib/net45/Akka.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Akka.dll": {}
+        }
+      },
+      "Akka.FSharp/1.0.3": {
+        "dependencies": {
+          "FsPickler": "0.9.11",
+          "FSPowerPack.Core.Community": "3.0.0.0",
+          "FSPowerPack.Linq.Community": "3.0.0.0",
+          "Akka": "1.0.3"
+        },
+        "compile": {
+          "lib/net45/Akka.FSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Akka.FSharp.dll": {}
+        }
+      },
+      "FSharp.Compiler.Service/0.0.89": {
+        "compile": {
+          "lib/net45/FSharp.Compiler.Service.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Compiler.Service.dll": {}
+        }
+      },
+      "FSharp.Core/3.1.2.1": {
+        "compile": {
+          "lib/net40/FSharp.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/FSharp.Core.dll": {}
+        }
+      },
+      "FsPickler/1.2.5": {
+        "frameworkAssemblies": [
+          "System.Runtime.Serialization",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/FsPickler.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FsPickler.dll": {}
+        }
+      },
+      "FSPowerPack.Core.Community/3.0.0.0": {
+        "compile": {
+          "Lib/Net40/FSharp.PowerPack.dll": {}
+        },
+        "runtime": {
+          "Lib/Net40/FSharp.PowerPack.dll": {}
+        }
+      },
+      "FSPowerPack.Linq.Community/3.0.0.0": {
+        "dependencies": {
+          "FSPowerPack.Core.Community": null
+        },
+        "compile": {
+          "Lib/Net40/FSharp.PowerPack.Linq.dll": {}
+        },
+        "runtime": {
+          "Lib/Net40/FSharp.PowerPack.Linq.dll": {}
+        }
+      },
+      "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6-12120": {
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Framework.Runtime.Caching/1.0.0-beta6-12120": {
+        "dependencies": {
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6-12120"
+        },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Runtime.Caching.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Runtime.Caching.dll": {}
+        }
+      },
+      "Newtonsoft.Json/6.0.8": {
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Suave/0.29.1": {
+        "dependencies": {
+          "FSharp.Core": "3.1.2.1",
+          "FsPickler": "1.2.5"
+        },
+        "compile": {
+          "lib/net40/Suave.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Suave.dll": {}
+        }
+      },
+      "System.Collections.Immutable/1.1.34-rc": {
+        "compile": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
+        }
+      },
+      "YoloDev.Dnx.FSharp/1.0.0-beta-0073": {
+        "dependencies": {
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6-12120",
+          "Microsoft.Framework.Runtime.Caching": "1.0.0-beta6-12120",
+          "System.Collections.Immutable": "1.1.34-rc",
+          "FSharp.Compiler.Service": "0.0.89",
+          "FSharp.Core": "3.1.2.1"
+        },
+        "frameworkAssemblies": [
+          "System.Runtime",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/YoloDev.Dnx.FSharp.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/YoloDev.Dnx.FSharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Akka/1.0.3": {
+      "sha512": "zyJCG2wEf2drvv00H/MsUp7FK88VOH6iygxaNyZihBvJf4dq01naBYCGXl9z45A5exY8Qca4Ahb0kUy6A0Ezbg==",
+      "files": [
+        "Akka.1.0.3.nupkg",
+        "Akka.1.0.3.nupkg.sha512",
+        "Akka.nuspec",
+        "lib/net45/Akka.ExternalAnnotations.xml",
+        "lib/net45/Akka.dll",
+        "lib/net45/Akka.xml"
+      ]
+    },
+    "Akka.FSharp/1.0.3": {
+      "sha512": "uJuHVrkYOQj0wZ2Jp6kmZF1xrtwnnT6awVhsirvhRsmIGNYvipUbZ+FbQBmyfuf1cUbDNLWTZ6Ldq5Zo84sClg==",
+      "files": [
+        "Akka.FSharp.1.0.3.nupkg",
+        "Akka.FSharp.1.0.3.nupkg.sha512",
+        "Akka.FSharp.nuspec",
+        "lib/net45/Akka.FSharp.XML",
+        "lib/net45/Akka.FSharp.dll"
+      ]
+    },
+    "FSharp.Compiler.Service/0.0.89": {
+      "sha512": "mNV/ixnjlU7jcC1CVO/Ww1dX/aThSOpEzc3YEsSZzDAtQFBqCyvfNEowrIJgGxmGiXTPz1VMVRYxNj2ibW/BfA==",
+      "files": [
+        "FSharp.Compiler.Service.0.0.89.nupkg",
+        "FSharp.Compiler.Service.0.0.89.nupkg.sha512",
+        "FSharp.Compiler.Service.nuspec",
+        "lib/net40/FSharp.Compiler.Service.XML",
+        "lib/net40/FSharp.Compiler.Service.dll",
+        "lib/net40/FSharp.Compiler.Service.pdb",
+        "lib/net45/FSharp.Compiler.Service.XML",
+        "lib/net45/FSharp.Compiler.Service.dll",
+        "lib/net45/FSharp.Compiler.Service.pdb"
+      ]
+    },
+    "FSharp.Core/3.1.2.1": {
+      "sha512": "5xdd0n/yvMdPLQrnxTlu70xAm1KkG0ugh4zZpX7pK1FCTtPCB1A8R1gnD7t6EeRMzuCUh4n62cfVvFxayy3fpQ==",
+      "files": [
+        "FSharp.Core.3.1.2.1.nupkg",
+        "FSharp.Core.3.1.2.1.nupkg.sha512",
+        "FSharp.Core.nuspec",
+        "lib/MonoAndroid/FSharp.Core.dll",
+        "lib/MonoAndroid/FSharp.Core.optdata",
+        "lib/MonoAndroid/FSharp.Core.sigdata",
+        "lib/MonoAndroid/FSharp.Core.xml",
+        "lib/MonoTouch/FSharp.Core.dll",
+        "lib/MonoTouch/FSharp.Core.optdata",
+        "lib/MonoTouch/FSharp.Core.sigdata",
+        "lib/MonoTouch/FSharp.Core.xml",
+        "lib/net40/FSharp.Core.dll",
+        "lib/net40/FSharp.Core.optdata",
+        "lib/net40/FSharp.Core.sigdata",
+        "lib/net40/FSharp.Core.xml",
+        "lib/portable-net45+netcore45+MonoAndroid1+MonoTouch1/FSharp.Core.dll",
+        "lib/portable-net45+netcore45+MonoAndroid1+MonoTouch1/FSharp.Core.optdata",
+        "lib/portable-net45+netcore45+MonoAndroid1+MonoTouch1/FSharp.Core.sigdata",
+        "lib/portable-net45+netcore45+MonoAndroid1+MonoTouch1/FSharp.Core.xml",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1/FSharp.Core.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1/FSharp.Core.optdata",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1/FSharp.Core.sigdata",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1/FSharp.Core.xml",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/FSharp.Core.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/FSharp.Core.optdata",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/FSharp.Core.sigdata",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/FSharp.Core.xml",
+        "lib/portable-net45+sl5+netcore45+MonoAndroid1+MonoTouch1/FSharp.Core.dll",
+        "lib/portable-net45+sl5+netcore45+MonoAndroid1+MonoTouch1/FSharp.Core.optdata",
+        "lib/portable-net45+sl5+netcore45+MonoAndroid1+MonoTouch1/FSharp.Core.sigdata",
+        "lib/portable-net45+sl5+netcore45+MonoAndroid1+MonoTouch1/FSharp.Core.xml"
+      ]
+    },
+    "FsPickler/1.2.5": {
+      "sha512": "fR5fgBjepQcQYFyKV545/cNgLfRWlqs8ajmIgPTORfeDN+fUpY+3jm9ijuPbkIkNFtgNOEHtXOjZh0SB8zaAcA==",
+      "files": [
+        "FsPickler.1.2.5.nupkg",
+        "FsPickler.1.2.5.nupkg.sha512",
+        "FsPickler.nuspec",
+        "lib/net40/FsPickler.dll",
+        "lib/net40/FsPickler.pdb",
+        "lib/net40/FsPickler.xml",
+        "lib/net45/FsPickler.dll",
+        "lib/net45/FsPickler.pdb",
+        "lib/net45/FsPickler.xml"
+      ]
+    },
+    "FSPowerPack.Core.Community/3.0.0.0": {
+      "sha512": "x5jhAZY0HwTB1/MAfWcfRbroKjoHgyjRpjjx2VEZwzvcQLK2MAq/me8o2xux2+Gqac9T8MidzkYpUpIYIgp+5Q==",
+      "files": [
+        "FSPowerPack.Core.Community.3.0.0.0.nupkg",
+        "FSPowerPack.Core.Community.3.0.0.0.nupkg.sha512",
+        "FSPowerPack.Core.Community.nuspec",
+        "Lib/Net20/FSharp.PowerPack.dll",
+        "Lib/Net20/FSharp.PowerPack.xml",
+        "Lib/Net40/FSharp.PowerPack.dll",
+        "Lib/Net40/FSharp.PowerPack.xml",
+        "Lib/sl3/FSharp.PowerPack.Compatibility.dll",
+        "Lib/sl3/FSharp.PowerPack.dll",
+        "Lib/sl3-wp/FSharp.PowerPack.Compatibility.dll",
+        "Lib/sl3-wp/FSharp.PowerPack.dll",
+        "Lib/sl4/FSharp.PowerPack.Compatibility.dll",
+        "Lib/sl4/FSharp.PowerPack.dll",
+        "Lib/sl4-windowsphone71/FSharp.PowerPack.Compatibility.dll",
+        "Lib/sl4-windowsphone71/FSharp.PowerPack.dll",
+        "Lib/sl5/FSharp.PowerPack.Compatibility.dll",
+        "Lib/sl5/FSharp.PowerPack.Linq.dll",
+        "Lib/sl5/FSharp.PowerPack.dll",
+        "tools/install.ps1"
+      ]
+    },
+    "FSPowerPack.Linq.Community/3.0.0.0": {
+      "sha512": "v6tN7v74Gu3+Md3n6VVKL/JJa1+jny9/oQplhzwKPfZtMjAeCwGeSkDTspmIu9hECOI/j7I9rdr3naoCg8iEZw==",
+      "files": [
+        "FSPowerPack.Linq.Community.3.0.0.0.nupkg",
+        "FSPowerPack.Linq.Community.3.0.0.0.nupkg.sha512",
+        "FSPowerPack.Linq.Community.nuspec",
+        "Lib/Net20/FSharp.PowerPack.Linq.dll",
+        "Lib/Net20/FSharp.PowerPack.Linq.xml",
+        "Lib/Net40/FSharp.PowerPack.Linq.dll",
+        "Lib/Net40/FSharp.PowerPack.Linq.xml",
+        "tools/install.ps1"
+      ]
+    },
+    "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6-12120": {
+      "serviceable": true,
+      "sha512": "+9Fuv8HEkwkTi7KZIHvn2JD4pQKVOC0nkn1seryViy/PRVkvn0ZvuATYmSH5vw8zlSMe1LHsf/sbjml73bNPsg==",
+      "files": [
+        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6-12120.nupkg",
+        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6-12120.nupkg.sha512",
+        "Microsoft.Framework.Runtime.Abstractions.nuspec",
+        "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll",
+        "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.xml",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Abstractions.dll",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Abstractions.xml"
+      ]
+    },
+    "Microsoft.Framework.Runtime.Caching/1.0.0-beta6-12120": {
+      "sha512": "C6ZxFAEsVtwWIJ+z4GZPzS8NNvA9ZpecGIlxZAvzDhDNJiukFPwwifyRbZwXOw9/unv2AFvxOCWbUfWn2iZhxw==",
+      "files": [
+        "Microsoft.Framework.Runtime.Caching.1.0.0-beta6-12120.nupkg",
+        "Microsoft.Framework.Runtime.Caching.1.0.0-beta6-12120.nupkg.sha512",
+        "Microsoft.Framework.Runtime.Caching.nuspec",
+        "lib/dnx451/Microsoft.Framework.Runtime.Caching.dll",
+        "lib/dnx451/Microsoft.Framework.Runtime.Caching.xml",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Caching.dll",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Caching.xml"
+      ]
+    },
+    "Newtonsoft.Json/6.0.8": {
+      "sha512": "7ut47NDedTW19EbL0JpFDYUP62fcuz27hJrehCDNajdCS5NtqL+E39+7Um3OkNc2wl2ym7K8Ln5eNuLus6mVGQ==",
+      "files": [
+        "Newtonsoft.Json.6.0.8.nupkg",
+        "Newtonsoft.Json.6.0.8.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
+        "tools/install.ps1"
+      ]
+    },
+    "Suave/0.29.1": {
+      "sha512": "CoWWC7PP+Qzn1Wpx67CDvOkJ+NQ26gihSdkCnVs/3HEDhxwtPzxYFWCT2gAZ0pnEyDBhPz6C+TmWV2iZB9ofBg==",
+      "files": [
+        "Suave.0.29.1.nupkg",
+        "Suave.0.29.1.nupkg.sha512",
+        "Suave.nuspec",
+        "lib/net40/Suave.dll",
+        "lib/net40/Suave.xml"
+      ]
+    },
+    "System.Collections.Immutable/1.1.34-rc": {
+      "serviceable": true,
+      "sha512": "WzH7eUVtkUymLcc80OuO5cgxg13xMqRgdGxfeAdlmZIxMt+z1zB8g3GRc2IoCC2gzkb+4CPzTYTwy50hKA6E1g==",
+      "files": [
+        "License-Stable.rtf",
+        "System.Collections.Immutable.1.1.34-rc.nupkg",
+        "System.Collections.Immutable.1.1.34-rc.nupkg.sha512",
+        "System.Collections.Immutable.nuspec",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml"
+      ]
+    },
+    "YoloDev.Dnx.FSharp/1.0.0-beta-0073": {
+      "sha512": "4B+O92YVxK8DBL6KoY4TinQlhdCUIU7Wq08iBJ4G4Vc4hOyebgeMlppAjG6Py7qARyHkpjh8Tplb0nu068vvvQ==",
+      "files": [
+        "YoloDev.Dnx.FSharp.1.0.0-beta-0073.nupkg",
+        "YoloDev.Dnx.FSharp.1.0.0-beta-0073.nupkg.sha512",
+        "YoloDev.Dnx.FSharp.nuspec",
+        "lib/dnx451/YoloDev.Dnx.FSharp.dll",
+        "lib/dnx451/YoloDev.Dnx.FSharp.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "YoloDev.Dnx.FSharp >= 1.0.0-beta-*",
+      "Suave >= 0.29.1",
+      "Akka >= 1.0.3",
+      "Akka.FSharp >= 1.0.3"
+    ],
+    "DNX,Version=v4.5.1": [
+      "fx/System.Runtime ",
+      "fx/System.Threading.Tasks "
+    ]
+  }
+}

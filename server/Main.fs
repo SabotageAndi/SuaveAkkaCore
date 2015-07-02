@@ -6,6 +6,7 @@ open Suave.Http.Successful
 open Suave.Http.Redirection
 open Suave.Http.Applicatives
 open Suave.Http.Files
+open Suave.Types
 open Suave.Web
 open Suave.Http.Writers
 open System.Threading
@@ -23,14 +24,12 @@ type Program() =
 
   let mutable akkaSystem = None
   
-  let sendRequestToActor url =
-  
-  
+  let sendRequestToActor (httpContext : HttpContext) =
     let callActor = async { 
         match akkaSystem with
         | Some x ->
           let actor = select "akka://SuaveAkkaCore/user/root" x
-          let! resp = actor <? url
+          let! resp = actor <? httpContext
           return Some resp
         | None ->
           printfn "no system here"
@@ -44,19 +43,25 @@ type Program() =
     | None ->
       Suave.Http.ServerErrors.SERVICE_UNAVAILABLE "System not running"
       
-  let app = 
-      choose 
-        [
-          GET >>= pathScan "/%s" (fun r -> (sendRequestToActor r))
-          POST >>= pathScan "/%s" (fun r -> (sendRequestToActor r))
-          Suave.Http.RequestErrors.NOT_FOUND "Found no handlers"
-        ]
+  let app : WebPart = 
+      fun (httpContext : HttpContext) ->
+        async {
+          let response = sendRequestToActor httpContext
+          return response
+        }
         
-  let handleRequest (mailbox: Actor<'a>) msg =
-    printfn "Actor gets called"
-    printfn "Message: %s" msg      
+  let mutable counter = 0       
+  
+  let handleRequest (mailbox: Actor<'a>) (msg : HttpContext) =
+  
+    let url = msg.request.url.ToString()
+    printfn "Message: %s" url      
+                         
+    counter <- counter + 1
+    
+    printfn "Request %i" counter
                                      
-    mailbox.Sender() <! OK msg
+    mailbox.Sender() <! OK url
     
 
   

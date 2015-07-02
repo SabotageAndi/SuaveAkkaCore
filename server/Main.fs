@@ -24,28 +24,40 @@ type Program() =
   let mutable akkaSystem = None
   
   let sendRequestToActor url =
+  
+  
     let callActor = async { 
         match akkaSystem with
         | Some x ->
           let actor = select "akka://SuaveAkkaCore/user/root" x
           let! resp = actor <? url
-          printfn "%s" resp
-          return resp
+          return Some resp
         | None ->
           printfn "no system here"
-          return ""
+          return None
       } 
     let result = callActor |> Async.RunSynchronously
-    printfn "Result: %s" result
-    result
-
+    
+    match result with
+    | Some response ->
+      response
+    | None ->
+      Suave.Http.ServerErrors.SERVICE_UNAVAILABLE "System not running"
+      
   let app = 
       choose 
         [
-          GET >>= pathScan "/%s" (fun r -> OK <| sendRequestToActor r)
-          POST >>= pathScan "/%s" (fun r -> OK <| sendRequestToActor r)
+          GET >>= pathScan "/%s" (fun r -> (sendRequestToActor r))
+          POST >>= pathScan "/%s" (fun r -> (sendRequestToActor r))
           Suave.Http.RequestErrors.NOT_FOUND "Found no handlers"
         ]
+        
+  let handleRequest (mailbox: Actor<'a>) msg =
+    printfn "Actor gets called"
+    printfn "Message: %s" msg      
+                                     
+    mailbox.Sender() <! OK msg
+    
 
   
   member x.Main () =
@@ -60,23 +72,11 @@ type Program() =
 
     Async.Start(shutdownServer, cts.Token)
     
-    let rootActor = spawn system "root" (fun mailbox ->
-                                          let rec loop() = actor {
-                                            let! message = mailbox.Receive()
-                                          
-                                       
-                                            printfn "Actor gets called"
-                                            printfn "Message: %s" message
-                                          
-                                          
-                                            return! loop()
-                                          }
-                                          loop())
-
+    let rootActor = spawn system "root" (actorOf2 handleRequest)
+    
 
     startingServer |> Async.RunSynchronously |> printfn "started: %A"
 
-    rootActor <! ""
 
     printfn "Press Enter to stop"
     Console.Read() |> ignore

@@ -19,16 +19,17 @@ type Program() =
     let callActor = async { 
       let actor = select "akka://SuaveAkkaCore/user/root" system
       let! resp = actor <? httpContext
-      return Some resp
+      return resp
     }
    
-    let response = 
+    let response = callActor |> Async.RunSynchronously
+(*    let response = 
       match callActor |> Async.RunSynchronously with
       | Some r ->
           r
       | None ->
           Suave.Http.ServerErrors.SERVICE_UNAVAILABLE "System not running"
-    
+    *)
     response httpContext    
                   
     
